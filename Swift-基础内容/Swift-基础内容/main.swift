@@ -171,6 +171,29 @@ serverResponseCode = nil
 
 var suerveyAnswer: String?
 //suerveyAnswer is automatically set to nil
+/*  If 语句以及强制展开
+    你可以利用 if 语句通过比较 nil 来判断一个可选中是否包含值。 利用相等运算符（==）和不等运算符（ != ）。
+ 如果一个可选有值，他就“不等于” nil ：*/
+
+if convertedNumber != nil {
+    print("convertedNumber contains some integer value.")
+}
+
+/*  一旦你确定可选中包含值，你可以在可选的名字后面加一个感叹号（!）来获取值，感叹号的意思就是说“我知道这个可选项里边有值，展开吧。”
+    这就是所谓的可选值的强制展开。
+    如需了解更多有关 if 语句的内容，请参考 控制流。
+    注意： 使用 ! 来获取一个不存在的可选值会导致运行错误，在使用 ! 强制展开之前必须确保可选项中包含一个非 nil 的值。  */
+if convertedNumber != nil {
+    print("convertedNumber has an integer value of \(convertedNumber).")
+}
+
+/*  可选项绑定
+    可以使用可选项绑定来判断可选项是否包含值，如果包含就把值赋给一个临时的常量或者变量。可选绑定可以与 if 和 while 的语句使用来检查可选项内部的值， 并
+    赋值给一个变量或常量。 if 和 while 语句的更多详细描述， 请参考控制流。
+    在 if 语句中，这样书写可选绑定：  */
+if let constantName = convertedNumber {
+//    statements
+}
 
 //MARK:13 错误处理
 
